@@ -12540,11 +12540,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Curso\\source\\repos\\CartService\\CartService\\CartService.csproj",
+      "projectUniqueName": "C:\\Users\\Curso\\Documents\\Academia\\CartService\\CartService\\CartService.csproj",
       "projectName": "CartService",
-      "projectPath": "C:\\Users\\Curso\\source\\repos\\CartService\\CartService\\CartService.csproj",
+      "projectPath": "C:\\Users\\Curso\\Documents\\Academia\\CartService\\CartService\\CartService.csproj",
       "packagesPath": "C:\\Users\\Curso\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Curso\\source\\repos\\CartService\\CartService\\obj\\",
+      "outputPath": "C:\\Users\\Curso\\Documents\\Academia\\CartService\\CartService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

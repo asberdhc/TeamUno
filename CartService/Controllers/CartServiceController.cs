@@ -16,5 +16,12 @@ namespace CartService.Controllers
         {
             return Ok();
         }
+        [HttpGet]
+        public ActionResult Get(string userId)
+        {
+
+
+            return Ok();
+        }
     }
 }
