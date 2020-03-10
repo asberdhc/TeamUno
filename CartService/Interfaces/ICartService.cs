@@ -11,7 +11,6 @@ namespace CartService.Interfaces
         ActionResult AddToCart(string userId, string productId, int quantity);
         ActionResult GetById(string userId);
         ActionResult EmptyCart();
-        
-        
+               
     }
 }

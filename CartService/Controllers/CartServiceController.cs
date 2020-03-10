@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CartService.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,19 +10,34 @@ namespace CartService.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CartServiceController : ControllerBase
+    public class CartServiceController : ControllerBase, ICartService
     {
-        [HttpGet]
-        public ActionResult Quick200Response()
+        //[HttpGet]
+        //public ActionResult Quick200Response()
+        //{
+        //    return Ok();
+        //}
+
+
+        [HttpPost]
+        [Route("")]
+        public ActionResult AddToCart(string userId, string productId, int quantity)
         {
-            return Ok();
+            throw new NotImplementedException();
         }
+
         [HttpGet]
-        public ActionResult Get(string userId)
+        [Route("{id}")]
+        public ActionResult GetById(string userId)
         {
-
-
-            return Ok();
+            return Ok(userId);
+          //  throw new NotImplementedException();
+        }
+        [HttpDelete]
+        [Route("")]
+        public ActionResult EmptyCart()
+        {
+            throw new NotImplementedException();
         }
     }
 }
