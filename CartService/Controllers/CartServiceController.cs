@@ -12,11 +12,12 @@ namespace CartService.Controllers
     [ApiController]
     public class CartServiceController : ControllerBase, ICartService
     {
-        //[HttpGet]
-        //public ActionResult Quick200Response()
-        //{
-        //    return Ok();
-        //}
+        [HttpGet]
+        [Route("")]
+        public ActionResult Quick200Response()
+        {
+            return Ok("Server Working");
+        }
 
 
         [HttpPost]
