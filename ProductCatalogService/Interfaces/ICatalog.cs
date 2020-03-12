@@ -14,7 +14,6 @@ namespace ProductCatalogService.Interfaces
                 
         ActionResult GetById(string id); 
         ActionResult GetByName(string name);
-        ActionResult EmtyCart(string id);
         
     }
 }
