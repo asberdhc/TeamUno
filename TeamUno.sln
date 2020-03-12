@@ -7,7 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CartService", "CartService\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CartServiceTest", "CartServiceTest\CartServiceTest.csproj", "{790D61E2-51DD-4E0F-ADCF-A243EE810A57}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductCatalogService", "ProductCatalogService\ProductCatalogService.csproj", "{A40FB996-38DF-4544-A37D-99E2C76F6D8F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductCatalogService", "ProductCatalogService\ProductCatalogService.csproj", "{A40FB996-38DF-4544-A37D-99E2C76F6D8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductCatalogServiceTest", "ProductCatalogServiceTest\ProductCatalogServiceTest.csproj", "{BA6B5C86-39C3-4879-A513-168EF1AAA98B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecommendationService", "RecommendationService\RecommendationService.csproj", "{E3DC8D59-D7FD-4C48-A268-AAB621640D76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecommendationServiceTest", "RecommendationServiceTest\RecommendationServiceTest.csproj", "{0D3FA671-0291-402D-9D1D-84D5564555D1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +33,18 @@ Global
 		{A40FB996-38DF-4544-A37D-99E2C76F6D8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A40FB996-38DF-4544-A37D-99E2C76F6D8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A40FB996-38DF-4544-A37D-99E2C76F6D8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA6B5C86-39C3-4879-A513-168EF1AAA98B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA6B5C86-39C3-4879-A513-168EF1AAA98B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA6B5C86-39C3-4879-A513-168EF1AAA98B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA6B5C86-39C3-4879-A513-168EF1AAA98B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3DC8D59-D7FD-4C48-A268-AAB621640D76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3DC8D59-D7FD-4C48-A268-AAB621640D76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3DC8D59-D7FD-4C48-A268-AAB621640D76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3DC8D59-D7FD-4C48-A268-AAB621640D76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D3FA671-0291-402D-9D1D-84D5564555D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D3FA671-0291-402D-9D1D-84D5564555D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D3FA671-0291-402D-9D1D-84D5564555D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D3FA671-0291-402D-9D1D-84D5564555D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

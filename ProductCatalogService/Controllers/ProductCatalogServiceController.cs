@@ -58,21 +58,6 @@ namespace ProductCatalogService.Controllers
             }
         }
 
-        ////GET api/producCatalogService?name={productName}
-        //[Route("")]
-        //[HttpGet]
-        //public ActionResult GetByName(string name)
-        //{
-        //    try
-        //    {
-        //        return Ok(db.SelectByName(name));
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        return StatusCode(StatusCodes.Status500InternalServerError);
-        //    }
-        //}
-
         //POST api/productCatalogService
         [Route("")]
         [HttpPost]

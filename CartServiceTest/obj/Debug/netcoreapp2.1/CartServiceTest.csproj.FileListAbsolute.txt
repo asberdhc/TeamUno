@@ -31,3 +31,4 @@ C:\Users\Curso\Documents\Academia\TeamUno\CartServiceTest\obj\Debug\netcoreapp2.
 C:\Users\Curso\Documents\Academia\TeamUno\CartServiceTest\obj\Debug\netcoreapp2.1\CartServiceTest.pdb
 C:\Users\Curso\source\repos\TeamUno\CartServiceTest\obj\Debug\netcoreapp2.1\CartServiceTest.dll
 C:\Users\Curso\source\repos\TeamUno\CartServiceTest\obj\Debug\netcoreapp2.1\CartServiceTest.pdb
+C:\Users\Curso\source\repos\TeamUno\CartServiceTest\bin\Debug\netcoreapp2.1\CartServiceTest.pdb

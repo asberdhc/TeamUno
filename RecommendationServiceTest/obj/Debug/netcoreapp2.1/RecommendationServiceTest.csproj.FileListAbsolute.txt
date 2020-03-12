@@ -1,0 +1,14 @@
+C:\Users\Curso\source\repos\TeamUno\RecommendationServiceTest\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Curso\source\repos\TeamUno\RecommendationServiceTest\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Curso\source\repos\TeamUno\RecommendationServiceTest\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Curso\source\repos\TeamUno\RecommendationServiceTest\bin\Debug\netcoreapp2.1\RecommendationServiceTest.deps.json
+C:\Users\Curso\source\repos\TeamUno\RecommendationServiceTest\bin\Debug\netcoreapp2.1\RecommendationServiceTest.runtimeconfig.json
+C:\Users\Curso\source\repos\TeamUno\RecommendationServiceTest\bin\Debug\netcoreapp2.1\RecommendationServiceTest.runtimeconfig.dev.json
+C:\Users\Curso\source\repos\TeamUno\RecommendationServiceTest\bin\Debug\netcoreapp2.1\RecommendationServiceTest.dll
+C:\Users\Curso\source\repos\TeamUno\RecommendationServiceTest\obj\Debug\netcoreapp2.1\RecommendationServiceTest.csprojAssemblyReference.cache
+C:\Users\Curso\source\repos\TeamUno\RecommendationServiceTest\obj\Debug\netcoreapp2.1\RecommendationServiceTest.csproj.CoreCompileInputs.cache
+C:\Users\Curso\source\repos\TeamUno\RecommendationServiceTest\obj\Debug\netcoreapp2.1\RecommendationServiceTest.AssemblyInfoInputs.cache
+C:\Users\Curso\source\repos\TeamUno\RecommendationServiceTest\obj\Debug\netcoreapp2.1\RecommendationServiceTest.AssemblyInfo.cs
+C:\Users\Curso\source\repos\TeamUno\RecommendationServiceTest\bin\Debug\netcoreapp2.1\RecommendationServiceTest.pdb
+C:\Users\Curso\source\repos\TeamUno\RecommendationServiceTest\obj\Debug\netcoreapp2.1\RecommendationServiceTest.dll
+C:\Users\Curso\source\repos\TeamUno\RecommendationServiceTest\obj\Debug\netcoreapp2.1\RecommendationServiceTest.pdb
