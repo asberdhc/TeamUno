@@ -13,7 +13,7 @@ namespace ProductCatalogService.Interfaces
     {
                 
         ActionResult GetById(string id); 
-        ActionResult GetByName(string name);
+        //ActionResult GetByName(string name);
         
     }
 }

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ProductCatalogService.Models
 {
-    public class Product
+    public class ProductDTO
     {
 
         /*id
@@ -18,7 +18,7 @@ namespace ProductCatalogService.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public string Picture { get; set; }
-        public Price PriceUsd { get; set; }
+        public PriceDTO PriceUsd { get; set; }
         public List<string> Categories { get; set; }
 
     }

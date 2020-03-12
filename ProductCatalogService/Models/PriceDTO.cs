@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ProductCatalogService.Models
 {
-    public class Price
+    public class PriceDTO
     {
 
         public string CurrencyCode { get; set; }

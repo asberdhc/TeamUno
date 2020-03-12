@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 namespace ProductCatalogService.Models
 {
-    public class Page
+    public class PageDTO
     {
 
-        public List<Product> Products { get; set; }
+        public List<ProductDTO> Products { get; set; }
         public int TotalItems { get; set; }
 
     }

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ProductCatalogService.Interfaces;
 using ProductCatalogService.Models;
+using ProductCatalogService.Models.EF;
 
 namespace ProductCatalogService.Controllers
 {
@@ -14,39 +15,111 @@ namespace ProductCatalogService.Controllers
     public class ProductCatalogServiceController : ControllerBase, ICatalog
 
     {
+        private IProductsDb db;
 
-      //  private DataProductsContext db;
-        
-        //NumPages
-        public ActionResult GetPage(int pageNumber)
+        public ProductCatalogServiceController(bool mock = false)
         {
-            return Ok();
-        }
-        
-        public ActionResult PostProduct(Product product)
-        {
-            return Ok();
+            if (mock)
+                db = new DataProductsMock();
+            else
+                db = new DataProducts();
         }
 
-        public ActionResult PutProduct(Product product)
-        {
-            return Ok();
-        }
-
-        public ActionResult Delete(string id)
-        {
-            return Ok();
-        }
-
+        //GET api/productCatalogService/{id}
+        [Route("{id}")]
+        [HttpGet]
         public ActionResult GetById(string id)
         {
-            //regresa un metodo Ok()
-            return Ok();
+            try
+            {
+                return Ok(db.SelectById(id));
+            }
+            catch (Exception e)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
         }
 
-        public ActionResult GetByName (string name)
+        //GET api/productCatalogService? pageNumber = { numPage }
+        [Route("")]
+        [HttpGet]
+        public ActionResult GetPage(int? pageNumber, string name)
         {
-            return Ok();
+            try
+            {
+                if (pageNumber.HasValue)
+                    return Ok(db.SelectPage(pageNumber.Value, 15));
+                else
+                    return Ok(db.SelectByName(name));
+            }
+            catch (Exception e)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        ////GET api/producCatalogService?name={productName}
+        //[Route("")]
+        //[HttpGet]
+        //public ActionResult GetByName(string name)
+        //{
+        //    try
+        //    {
+        //        return Ok(db.SelectByName(name));
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        return StatusCode(StatusCodes.Status500InternalServerError);
+        //    }
+        //}
+
+        //POST api/productCatalogService
+        [Route("")]
+        [HttpPost]
+        public ActionResult PostProduct([FromBody] ProductDTO productDTO)
+        {
+            try
+            {
+                return Ok(db.Insert(productDTO));
+            }
+            catch (Exception e)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        //PUT api/productCatalogService
+        [Route("")]
+        [HttpPut]
+        public ActionResult PutProduct([FromBody] ProductDTO productDTO)
+        {
+            try
+            {
+                if (db.Update(productDTO))
+                    return Ok();
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
+            catch (Exception e)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        //DELETE api/productCatalogService/{id}
+        [Route("{id}")]
+        [HttpDelete]
+        public ActionResult Delete(string id)
+        {
+            try
+            {
+                if (db.Delete(id))
+                    return Ok();
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
+            catch (Exception e)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
         }
 
     }

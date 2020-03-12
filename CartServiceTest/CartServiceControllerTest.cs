@@ -31,7 +31,7 @@ namespace CartServiceTest
             int actual = 0;
             try
             {
-                var response = (OkResult)cartServiceControllerMock.AddToCart(userId, productId, quantity);
+                var response = (OkResult)cartServiceControllerMock.AddToCart(new CartService.Models.Cart());
                 actual = response.StatusCode;
             }
             catch(InvalidCastException e)
