@@ -15,7 +15,7 @@ namespace ProductCatalogService.Controllers
 
     {
 
-        private DataProductsContext db;
+      //  private DataProductsContext db;
         
         //NumPages
         public ActionResult GetPage(int pageNumber)

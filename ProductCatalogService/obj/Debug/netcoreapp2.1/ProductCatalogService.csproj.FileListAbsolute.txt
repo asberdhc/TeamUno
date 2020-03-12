@@ -11,3 +11,17 @@ C:\Users\Curso\Documents\product12\TeamUno\ProductCatalogService\obj\Debug\netco
 C:\Users\Curso\Documents\product12\TeamUno\ProductCatalogService\bin\Debug\netcoreapp2.1\ProductCatalogService.pdb
 C:\Users\Curso\Documents\product12\TeamUno\ProductCatalogService\obj\Debug\netcoreapp2.1\ProductCatalogService.dll
 C:\Users\Curso\Documents\product12\TeamUno\ProductCatalogService\obj\Debug\netcoreapp2.1\ProductCatalogService.pdb
+C:\Users\Curso\Documents\Academia\TeamUno\ProductCatalogService\bin\Debug\netcoreapp2.1\ProductCatalogService.deps.json
+C:\Users\Curso\Documents\Academia\TeamUno\ProductCatalogService\bin\Debug\netcoreapp2.1\ProductCatalogService.runtimeconfig.json
+C:\Users\Curso\Documents\Academia\TeamUno\ProductCatalogService\bin\Debug\netcoreapp2.1\ProductCatalogService.runtimeconfig.dev.json
+C:\Users\Curso\Documents\Academia\TeamUno\ProductCatalogService\bin\Debug\netcoreapp2.1\ProductCatalogService.dll
+C:\Users\Curso\Documents\Academia\TeamUno\ProductCatalogService\bin\Debug\netcoreapp2.1\ProductCatalogService.pdb
+C:\Users\Curso\Documents\Academia\TeamUno\ProductCatalogService\obj\Debug\netcoreapp2.1\ProductCatalogService.csprojAssemblyReference.cache
+C:\Users\Curso\Documents\Academia\TeamUno\ProductCatalogService\obj\Debug\netcoreapp2.1\ProductCatalogService.csproj.CoreCompileInputs.cache
+C:\Users\Curso\Documents\Academia\TeamUno\ProductCatalogService\obj\Debug\netcoreapp2.1\ProductCatalogService.RazorAssemblyInfo.cache
+C:\Users\Curso\Documents\Academia\TeamUno\ProductCatalogService\obj\Debug\netcoreapp2.1\ProductCatalogService.RazorAssemblyInfo.cs
+C:\Users\Curso\Documents\Academia\TeamUno\ProductCatalogService\obj\Debug\netcoreapp2.1\ProductCatalogService.AssemblyInfoInputs.cache
+C:\Users\Curso\Documents\Academia\TeamUno\ProductCatalogService\obj\Debug\netcoreapp2.1\ProductCatalogService.AssemblyInfo.cs
+C:\Users\Curso\Documents\Academia\TeamUno\ProductCatalogService\obj\Debug\netcoreapp2.1\ProductCatalogService.RazorTargetAssemblyInfo.cache
+C:\Users\Curso\Documents\Academia\TeamUno\ProductCatalogService\obj\Debug\netcoreapp2.1\ProductCatalogService.dll
+C:\Users\Curso\Documents\Academia\TeamUno\ProductCatalogService\obj\Debug\netcoreapp2.1\ProductCatalogService.pdb

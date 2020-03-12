@@ -54,3 +54,17 @@ C:\Users\Curso\Documents\product12\TeamUno\CartService\obj\Debug\netcoreapp2.1\C
 C:\Users\Curso\Documents\product12\TeamUno\CartService\obj\Debug\netcoreapp2.1\CartService.RazorTargetAssemblyInfo.cache
 C:\Users\Curso\Documents\product12\TeamUno\CartService\obj\Debug\netcoreapp2.1\CartService.dll
 C:\Users\Curso\Documents\product12\TeamUno\CartService\obj\Debug\netcoreapp2.1\CartService.pdb
+C:\Users\Curso\Documents\Academia\TeamUno\CartService\bin\Debug\netcoreapp2.1\CartService.deps.json
+C:\Users\Curso\Documents\Academia\TeamUno\CartService\bin\Debug\netcoreapp2.1\CartService.runtimeconfig.json
+C:\Users\Curso\Documents\Academia\TeamUno\CartService\bin\Debug\netcoreapp2.1\CartService.runtimeconfig.dev.json
+C:\Users\Curso\Documents\Academia\TeamUno\CartService\bin\Debug\netcoreapp2.1\CartService.dll
+C:\Users\Curso\Documents\Academia\TeamUno\CartService\bin\Debug\netcoreapp2.1\CartService.pdb
+C:\Users\Curso\Documents\Academia\TeamUno\CartService\obj\Debug\netcoreapp2.1\CartService.csprojAssemblyReference.cache
+C:\Users\Curso\Documents\Academia\TeamUno\CartService\obj\Debug\netcoreapp2.1\CartService.csproj.CoreCompileInputs.cache
+C:\Users\Curso\Documents\Academia\TeamUno\CartService\obj\Debug\netcoreapp2.1\CartService.RazorAssemblyInfo.cache
+C:\Users\Curso\Documents\Academia\TeamUno\CartService\obj\Debug\netcoreapp2.1\CartService.RazorAssemblyInfo.cs
+C:\Users\Curso\Documents\Academia\TeamUno\CartService\obj\Debug\netcoreapp2.1\CartService.AssemblyInfoInputs.cache
+C:\Users\Curso\Documents\Academia\TeamUno\CartService\obj\Debug\netcoreapp2.1\CartService.AssemblyInfo.cs
+C:\Users\Curso\Documents\Academia\TeamUno\CartService\obj\Debug\netcoreapp2.1\CartService.RazorTargetAssemblyInfo.cache
+C:\Users\Curso\Documents\Academia\TeamUno\CartService\obj\Debug\netcoreapp2.1\CartService.dll
+C:\Users\Curso\Documents\Academia\TeamUno\CartService\obj\Debug\netcoreapp2.1\CartService.pdb

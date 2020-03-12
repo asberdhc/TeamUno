@@ -12535,11 +12535,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Curso\\Documents\\product12\\TeamUno\\ProductCatalogService\\ProductCatalogService.csproj",
+      "projectUniqueName": "C:\\Users\\Curso\\Documents\\Academia\\TeamUno\\ProductCatalogService\\ProductCatalogService.csproj",
       "projectName": "ProductCatalogService",
-      "projectPath": "C:\\Users\\Curso\\Documents\\product12\\TeamUno\\ProductCatalogService\\ProductCatalogService.csproj",
+      "projectPath": "C:\\Users\\Curso\\Documents\\Academia\\TeamUno\\ProductCatalogService\\ProductCatalogService.csproj",
       "packagesPath": "C:\\Users\\Curso\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Curso\\Documents\\product12\\TeamUno\\ProductCatalogService\\obj\\",
+      "outputPath": "C:\\Users\\Curso\\Documents\\Academia\\TeamUno\\ProductCatalogService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
