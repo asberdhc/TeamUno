@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CartService.Models;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ namespace CartService.Interfaces
 {
     interface ICartService
     {
-        ActionResult AddToCart(string userId, string productId, int quantity);
+        ActionResult AddToCart(Cart cart);
         ActionResult GetById(string userId);
         ActionResult EmptyCart(string id);
                

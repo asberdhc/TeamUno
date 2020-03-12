@@ -23,39 +23,42 @@ namespace CartService.Controllers
 
         [HttpPost]
         [Route("")]
-        public ActionResult AddToCart(string userId, string productId, int quantity)
+        
+        public ActionResult AddToCart([FromBody] Cart cartFromBody)
         {
             Cart cart = new Cart {
-                idClient = userId,
-                idProduct = productId,
-                quantity = quantity
+                idClient = cartFromBody.idClient,
+                idProduct = cartFromBody.idProduct,
+                quantity = cartFromBody.quantity
                 
             };
             Data data = new Data();
             if (data.AddtoCart(cart))
-                return Ok();
+                return Ok("The product has been added to cart");
             else
                 return Ok("product not added to cart");
             throw new NotImplementedException();
         }
 
         [HttpGet]
-        [Route("{id}")]
+        [Route("{userId}")]
         public ActionResult GetById(string userId)
         {
             List<Cart> cartList = new List<Cart>();
             Data data = new Data();
             cartList.AddRange(data.GetCartById(userId));
-            return Ok(userId);
+            if (cartList.Count == 0 || cartList == null)
+                return Ok("Empty cart");
+            return Ok(cartList);
           //  throw new NotImplementedException();
         }
         [HttpDelete]
-        [Route("")]
-        public ActionResult EmptyCart(string id)
+        [Route("{userId}")]
+        public ActionResult EmptyCart(string userId)
         {
             Data data = new Data();
 
-            if (data.EmptyCart(id))
+            if (data.EmptyCart(userId))
                 return Ok("Cart empty");
             else
                 return Ok("Can´t empty cart");

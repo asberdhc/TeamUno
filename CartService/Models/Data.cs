@@ -15,6 +15,7 @@ namespace CartService.Models
             {
                 CatTypeDetails catTypeDetails = new CatTypeDetails
                 {
+                   IdType = 1,
                     Code = cart.idProduct.ToString(),
                     Name = cart.idClient.ToString(),
                     Description = cart.quantity.ToString()
@@ -45,6 +46,7 @@ namespace CartService.Models
             cartList.AddRange(cart);
             return cartList;
         }
+
 
         public bool EmptyCart(string id)
         {
