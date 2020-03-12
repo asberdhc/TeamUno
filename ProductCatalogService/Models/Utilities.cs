@@ -4,11 +4,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace ProductCatalogService.Models
 {
-    public class Images
+    public class Utilities
     {
         private static string URL;
         /// <summary>
@@ -17,7 +18,7 @@ namespace ProductCatalogService.Models
         /// </summary>
         /// <param name="name"></param>
         /// <returns>String URL of a web Image server</returns>
-        public static string ByNameOrDefault(string name)
+        public static string GetImageByNameOrDefault(string name)
         {
             try
             {
@@ -42,7 +43,7 @@ namespace ProductCatalogService.Models
                 }
                 else
                 {
-                    URL = ByNameOrDefault("random");
+                    URL = GetImageByNameOrDefault("random");
                 }
 
                 return URL;
@@ -55,6 +56,30 @@ namespace ProductCatalogService.Models
             {
                 throw e;
             }
+        }
+
+        public static string NewProductId(int requiredLength, bool requireNonAlphanumeric = true, bool requireDigit = true, bool requireLowercase = true, bool requireUppercase = true)
+        {
+            int length = requiredLength;
+
+            StringBuilder password = new StringBuilder();
+            Random random = new Random();
+
+            while (password.Length < length)
+            {
+                char c = (char)random.Next(32, 126);
+
+                if (char.IsDigit(c) && requireDigit)
+                    password.Append(c);
+                else if (char.IsLower(c) && requireLowercase)
+                    password.Append(c);
+                else if (char.IsUpper(c) && requireUppercase)
+                    password.Append(c);
+                else if (!char.IsLetterOrDigit(c) && requireNonAlphanumeric)
+                    password.Append(c);
+            }
+
+            return password.ToString();
         }
     }
 }

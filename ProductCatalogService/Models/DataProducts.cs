@@ -35,12 +35,17 @@ namespace ProductCatalogService.Models
         {
             try
             {
+                //generate a new ID for the product
+                string newId = Utilities.NewProductId(10, false);
+                while (db.Products.FirstOrDefault(p => p.Title == newId) != null)
+                    newId = Utilities.NewProductId(10, false);
+
                 var productInserted = db.Products.Add(new Products
                 {
-                    Title = NewProductId(10, false, true, true, true),
+                    Title = newId,
                     Nombre = productDTO.Name,
                     Description = productDTO.Description,
-                    Observations = Images.ByNameOrDefault(productDTO.Name),
+                    Observations = Utilities.GetImageByNameOrDefault(productDTO.Name),
                     PriceDistributor = USD,
                     PriceClient = productDTO.PriceUsd.Units,
                     PriceMember = productDTO.PriceUsd.Nanos,
@@ -58,46 +63,6 @@ namespace ProductCatalogService.Models
             {
                 throw e;
             }
-        }
-
-        public string NewProductId(int requiredLength, bool requireNonAlphanumeric, bool requireDigit, bool requireLowercase, bool requireUppercase)
-        {
-            int length = requiredLength;
-
-            bool nonAlphanumeric = requireNonAlphanumeric;
-            bool digit = requireDigit;
-            bool lowercase = requireLowercase;
-            bool uppercase = requireUppercase;
-
-            StringBuilder password = new StringBuilder();
-            Random random = new Random();
-
-            while (password.Length < length)
-            {
-                char c = (char)random.Next(32, 126);
-
-                password.Append(c);
-
-                if (char.IsDigit(c))
-                    digit = false;
-                else if (char.IsLower(c))
-                    lowercase = false;
-                else if (char.IsUpper(c))
-                    uppercase = false;
-                else if (!char.IsLetterOrDigit(c))
-                    nonAlphanumeric = false;
-            }
-
-            if (nonAlphanumeric)
-                password.Append((char)random.Next(33, 48));
-            if (digit)
-                password.Append((char)random.Next(48, 58));
-            if (lowercase)
-                password.Append((char)random.Next(97, 123));
-            if (uppercase)
-                password.Append((char)random.Next(65, 91));
-
-            return password.ToString();
         }
 
         public ProductDTO SelectById(string idProduct)
@@ -165,7 +130,7 @@ namespace ProductCatalogService.Models
         {
             try
             {
-                int totalOfProducts = db.Products.Count();
+                int totalOfProducts = db.Products.Where(p => p.IsEnabled == true).Count();
                 int totalPages = totalOfProducts / numItems;
                 if (totalOfProducts % numItems > 0)
                     totalPages++;
