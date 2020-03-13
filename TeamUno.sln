@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.960
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CartService", "CartService\CartService.csproj", "{EFD4F730-5DF0-47D3-84CB-01B3D0C7DE7D}"
 EndProject
@@ -9,11 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CartServiceTest", "CartServ
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductCatalogService", "ProductCatalogService\ProductCatalogService.csproj", "{A40FB996-38DF-4544-A37D-99E2C76F6D8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductCatalogServiceTest", "ProductCatalogServiceTest\ProductCatalogServiceTest.csproj", "{BA6B5C86-39C3-4879-A513-168EF1AAA98B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductCatalogServiceTest", "ProductCatalogServiceTest\ProductCatalogServiceTest.csproj", "{BA6B5C86-39C3-4879-A513-168EF1AAA98B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecommendationService", "RecommendationService\RecommendationService.csproj", "{E3DC8D59-D7FD-4C48-A268-AAB621640D76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecommendationServiceTest", "RecommendationServiceTest\RecommendationServiceTest.csproj", "{0D3FA671-0291-402D-9D1D-84D5564555D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecommendationServiceTest", "RecommendationServiceTest\RecommendationServiceTest.csproj", "{0D3FA671-0291-402D-9D1D-84D5564555D1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecommendationService", "RecommendationService\RecommendationService.csproj", "{A54592F6-C0B1-46E7-9F66-C43A816B037F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,14 +37,14 @@ Global
 		{BA6B5C86-39C3-4879-A513-168EF1AAA98B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA6B5C86-39C3-4879-A513-168EF1AAA98B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA6B5C86-39C3-4879-A513-168EF1AAA98B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E3DC8D59-D7FD-4C48-A268-AAB621640D76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E3DC8D59-D7FD-4C48-A268-AAB621640D76}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E3DC8D59-D7FD-4C48-A268-AAB621640D76}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E3DC8D59-D7FD-4C48-A268-AAB621640D76}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0D3FA671-0291-402D-9D1D-84D5564555D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0D3FA671-0291-402D-9D1D-84D5564555D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D3FA671-0291-402D-9D1D-84D5564555D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D3FA671-0291-402D-9D1D-84D5564555D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A54592F6-C0B1-46E7-9F66-C43A816B037F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A54592F6-C0B1-46E7-9F66-C43A816B037F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A54592F6-C0B1-46E7-9F66-C43A816B037F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A54592F6-C0B1-46E7-9F66-C43A816B037F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

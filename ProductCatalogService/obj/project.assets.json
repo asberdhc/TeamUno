@@ -12529,21 +12529,17 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Curso\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Curso\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Curso\\source\\repos\\TeamUno\\ProductCatalogService\\ProductCatalogService.csproj",
+      "projectUniqueName": "C:\\Users\\Curso\\Desktop\\API\\TeamUno\\ProductCatalogService\\ProductCatalogService.csproj",
       "projectName": "ProductCatalogService",
-      "projectPath": "C:\\Users\\Curso\\source\\repos\\TeamUno\\ProductCatalogService\\ProductCatalogService.csproj",
+      "projectPath": "C:\\Users\\Curso\\Desktop\\API\\TeamUno\\ProductCatalogService\\ProductCatalogService.csproj",
       "packagesPath": "C:\\Users\\Curso\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Curso\\source\\repos\\TeamUno\\ProductCatalogService\\obj\\",
+      "outputPath": "C:\\Users\\Curso\\Desktop\\API\\TeamUno\\ProductCatalogService\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
         "C:\\Users\\Curso\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -12581,6 +12577,7 @@
             "version": "[2.1.2, )"
           },
           "Microsoft.NETCore.App": {
+            "suppressParent": "All",
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
@@ -12591,10 +12588,16 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
