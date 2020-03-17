@@ -26,6 +26,18 @@ namespace RecommendationService
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddSwaggerGen(c => c.SwaggerDoc("V1", new Microsoft.OpenApi.Models.OpenApiInfo
+            {
+                Version = "v1",
+                Title = "Recomendation service",
+                Description = "API to give a recomentation based on a product id",
+                Contact = new Microsoft.OpenApi.Models.OpenApiContact
+                {
+                    Name = "TeamUno",
+                    Email = "TeamUno@mail.com"
+                }
+            }));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,6 +54,9 @@ namespace RecommendationService
 
             app.UseHttpsRedirection();
             app.UseMvc();
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/V1/swagger.json", "Recomendation Service V1"));
         }
     }
 }

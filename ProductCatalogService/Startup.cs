@@ -26,6 +26,17 @@ namespace ProductCatalogService
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddSwaggerGen(c => c.SwaggerDoc("V1", new Microsoft.OpenApi.Models.OpenApiInfo {
+                Version = "v1",
+                Title = "Products Catalog Service",
+                Description = "A catalog of products with basic operations CRUD",
+                Contact = new Microsoft.OpenApi.Models.OpenApiContact
+                {
+                    Name = "TeamUno",
+                    Email = "TeamUno@mail.com"
+                }
+            }));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,6 +53,9 @@ namespace ProductCatalogService
 
             app.UseHttpsRedirection();
             app.UseMvc();
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/V1/swagger.json", "Product Catalog Service v1"));
         }
     }
 }

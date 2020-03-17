@@ -30,7 +30,6 @@ C:\Users\Curso\source\repos\TeamUno\ProductCatalogService\bin\Debug\netcoreapp2.
 C:\Users\Curso\source\repos\TeamUno\ProductCatalogService\bin\Debug\netcoreapp2.1\ProductCatalogService.runtimeconfig.dev.json
 C:\Users\Curso\source\repos\TeamUno\ProductCatalogService\bin\Debug\netcoreapp2.1\ProductCatalogService.dll
 C:\Users\Curso\source\repos\TeamUno\ProductCatalogService\bin\Debug\netcoreapp2.1\ProductCatalogService.pdb
-C:\Users\Curso\source\repos\TeamUno\ProductCatalogService\obj\Debug\netcoreapp2.1\ProductCatalogService.csprojAssemblyReference.cache
 C:\Users\Curso\source\repos\TeamUno\ProductCatalogService\obj\Debug\netcoreapp2.1\ProductCatalogService.csproj.CoreCompileInputs.cache
 C:\Users\Curso\source\repos\TeamUno\ProductCatalogService\obj\Debug\netcoreapp2.1\ProductCatalogService.RazorAssemblyInfo.cache
 C:\Users\Curso\source\repos\TeamUno\ProductCatalogService\obj\Debug\netcoreapp2.1\ProductCatalogService.RazorAssemblyInfo.cs
