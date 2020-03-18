@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using CartService.Interfaces;
 using CartService.Models;
+using CartService.Models.EF;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,6 +14,13 @@ namespace CartService.Controllers
     [ApiController]
     public class CartServiceController : ControllerBase, ICartService
     {
+        private DataProductsContext db;
+        public CartServiceController(DataProductsContext db)
+        {
+            this.db = db;
+        }
+
+
         [HttpGet]
         [Route("")]
         public ActionResult Quick200Response()
@@ -32,7 +40,7 @@ namespace CartService.Controllers
                 quantity = cartFromBody.quantity
                 
             };
-            Data data = new Data();
+            Data data = new Data(db);
             if (data.AddtoCart(cart))
                 return Ok("The product has been added to cart");
             else
@@ -45,7 +53,7 @@ namespace CartService.Controllers
         public ActionResult GetById(string userId)
         {
             List<Cart> cartList = new List<Cart>();
-            Data data = new Data();
+            Data data = new Data(db);
             cartList.AddRange(data.GetCartById(userId));
             if (cartList.Count == 0 || cartList == null)
                 return Ok("Empty cart");
@@ -56,7 +64,7 @@ namespace CartService.Controllers
         [Route("{userId}")]
         public ActionResult EmptyCart(string userId)
         {
-            Data data = new Data();
+            Data data = new Data(db);
 
             if (data.EmptyCart(userId))
                 return Ok("Cart empty");

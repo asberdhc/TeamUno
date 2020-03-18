@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "f42528bae1a929da5c8a5b7f3412d75aa176f5e5"
+    "signature": "aefb282dbca50f9f5840ec90bd446b41eecb3821"
   },
   "compilationOptions": {},
   "targets": {
@@ -342,6 +342,7 @@
           }
         }
       },
+      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.4.10": {},
       "Microsoft.VisualStudio.Web.CodeGeneration/2.1.9": {
         "dependencies": {
           "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore": "2.1.9"
@@ -669,6 +670,7 @@
       "CartService/1.0.0": {
         "dependencies": {
           "Microsoft.NETCore.App": "2.1.0",
+          "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.4.10",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.1.9",
           "Swashbuckle.AspNetCore": "5.1.0"
         },
@@ -788,6 +790,13 @@
       "sha512": "sha512-ve8yMTxeK5p8iTn7fCXzrTGiAqlx21thussMEflAOmVEe56OPOi2grkxLEguw7tDOXBKZtRPI7CeH+nXOpEb/g==",
       "path": "microsoft.testplatform.testhost/15.9.0",
       "hashPath": "microsoft.testplatform.testhost.15.9.0.nupkg.sha512"
+    },
+    "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.4.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-V7H6e/ZkxYtBzFZxuj0N/ubyiwkGfZnS7Ha+W9mvqfrA8XLiEg8H5SzYh+kVeb45nvFMI1/8XA6Nuj09t/OE5Q==",
+      "path": "microsoft.visualstudio.azure.containers.tools.targets/1.4.10",
+      "hashPath": "microsoft.visualstudio.azure.containers.tools.targets.1.4.10.nupkg.sha512"
     },
     "Microsoft.VisualStudio.Web.CodeGeneration/2.1.9": {
       "type": "package",

@@ -7,7 +7,13 @@ namespace CartService.Models
 {
     public class Data
     {
-        DataProductsContext db = new DataProductsContext();
+       // DataProductsContext db = new DataProductsContext();
+        private DataProductsContext db;
+        public Data(DataProductsContext db)
+        {
+            this.db = db;
+        }
+
 
         public bool AddtoCart(Cart cart)
         {

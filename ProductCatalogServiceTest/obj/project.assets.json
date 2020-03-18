@@ -14388,11 +14388,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Curso\\source\\repos\\TeamUno\\ProductCatalogServiceTest\\ProductCatalogServiceTest.csproj",
+      "projectUniqueName": "C:\\Users\\Curso\\Documents\\Academia\\TeamUno\\ProductCatalogServiceTest\\ProductCatalogServiceTest.csproj",
       "projectName": "ProductCatalogServiceTest",
-      "projectPath": "C:\\Users\\Curso\\source\\repos\\TeamUno\\ProductCatalogServiceTest\\ProductCatalogServiceTest.csproj",
+      "projectPath": "C:\\Users\\Curso\\Documents\\Academia\\TeamUno\\ProductCatalogServiceTest\\ProductCatalogServiceTest.csproj",
       "packagesPath": "C:\\Users\\Curso\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Curso\\source\\repos\\TeamUno\\ProductCatalogServiceTest\\obj\\",
+      "outputPath": "C:\\Users\\Curso\\Documents\\Academia\\TeamUno\\ProductCatalogServiceTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -14411,8 +14411,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\Curso\\source\\repos\\TeamUno\\ProductCatalogService\\ProductCatalogService.csproj": {
-              "projectPath": "C:\\Users\\Curso\\source\\repos\\TeamUno\\ProductCatalogService\\ProductCatalogService.csproj"
+            "C:\\Users\\Curso\\Documents\\Academia\\TeamUno\\ProductCatalogService\\ProductCatalogService.csproj": {
+              "projectPath": "C:\\Users\\Curso\\Documents\\Academia\\TeamUno\\ProductCatalogService\\ProductCatalogService.csproj"
             }
           }
         }

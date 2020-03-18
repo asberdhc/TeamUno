@@ -13319,11 +13319,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Curso\\source\\repos\\TeamUno\\RecommendationServiceTest\\RecommendationServiceTest.csproj",
+      "projectUniqueName": "C:\\Users\\Curso\\Documents\\Academia\\TeamUno\\RecommendationServiceTest\\RecommendationServiceTest.csproj",
       "projectName": "RecommendationServiceTest",
-      "projectPath": "C:\\Users\\Curso\\source\\repos\\TeamUno\\RecommendationServiceTest\\RecommendationServiceTest.csproj",
+      "projectPath": "C:\\Users\\Curso\\Documents\\Academia\\TeamUno\\RecommendationServiceTest\\RecommendationServiceTest.csproj",
       "packagesPath": "C:\\Users\\Curso\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Curso\\source\\repos\\TeamUno\\RecommendationServiceTest\\obj\\",
+      "outputPath": "C:\\Users\\Curso\\Documents\\Academia\\TeamUno\\RecommendationServiceTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

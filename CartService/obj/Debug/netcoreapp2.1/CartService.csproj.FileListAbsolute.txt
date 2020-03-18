@@ -84,3 +84,4 @@ C:\Users\Curso\Desktop\API\TeamUno\CartService\obj\Debug\netcoreapp2.1\CartServi
 C:\Users\Curso\Desktop\API\TeamUno\CartService\obj\Debug\netcoreapp2.1\CartService.RazorTargetAssemblyInfo.cache
 C:\Users\Curso\Desktop\API\TeamUno\CartService\obj\Debug\netcoreapp2.1\CartService.dll
 C:\Users\Curso\Desktop\API\TeamUno\CartService\obj\Debug\netcoreapp2.1\CartService.pdb
+C:\Users\Curso\Documents\Academia\TeamUno\CartService\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
