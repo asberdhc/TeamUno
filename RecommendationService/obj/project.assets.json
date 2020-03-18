@@ -4735,22 +4735,6 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
-      },
-      "ProductCatalogService/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.1",
-        "dependencies": {
-          "Microsoft.NETCore.App": "2.1.0",
-          "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.4.10",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.1.9",
-          "Swashbuckle.AspNetCore": "5.1.0"
-        },
-        "compile": {
-          "bin/placeholder/ProductCatalogService.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/ProductCatalogService.dll": {}
-        }
       }
     }
   },
@@ -12971,11 +12955,6 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
-    },
-    "ProductCatalogService/1.0.0": {
-      "type": "project",
-      "path": "../ProductCatalogService/ProductCatalogService.csproj",
-      "msbuildProject": "../ProductCatalogService/ProductCatalogService.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -12993,7 +12972,6 @@
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.4.10",
       "Microsoft.VisualStudio.Web.BrowserLink >= 2.1.1",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.10",
-      "ProductCatalogService >= 1.0.0",
       "Swashbuckle.AspNetCore >= 5.1.0"
     ]
   },
@@ -13004,11 +12982,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Curso\\Documents\\Academia\\TeamUno\\RecommendationService\\RecommendationService.csproj",
+      "projectUniqueName": "C:\\Users\\Curso\\source\\repos\\TeamUno\\RecommendationService\\RecommendationService.csproj",
       "projectName": "RecommendationService",
-      "projectPath": "C:\\Users\\Curso\\Documents\\Academia\\TeamUno\\RecommendationService\\RecommendationService.csproj",
+      "projectPath": "C:\\Users\\Curso\\source\\repos\\TeamUno\\RecommendationService\\RecommendationService.csproj",
       "packagesPath": "C:\\Users\\Curso\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Curso\\Documents\\Academia\\TeamUno\\RecommendationService\\obj\\",
+      "outputPath": "C:\\Users\\Curso\\source\\repos\\TeamUno\\RecommendationService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -13026,11 +13004,7 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {
-            "C:\\Users\\Curso\\Documents\\Academia\\TeamUno\\ProductCatalogService\\ProductCatalogService.csproj": {
-              "projectPath": "C:\\Users\\Curso\\Documents\\Academia\\TeamUno\\ProductCatalogService\\ProductCatalogService.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

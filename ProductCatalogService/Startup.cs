@@ -55,7 +55,11 @@ namespace ProductCatalogService
             app.UseMvc();
 
             app.UseSwagger();
-            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/V1/swagger.json", "Product Catalog Service v1"));
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/V1/swagger.json", "Product Catalog Service v1");
+                c.RoutePrefix = string.Empty;
+            });
         }
     }
 }

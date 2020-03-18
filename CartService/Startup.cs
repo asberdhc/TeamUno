@@ -59,7 +59,10 @@ namespace CartService
             app.UseHttpsRedirection();
             app.UseMvc();
             app.UseSwagger();
-            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/V1/swagger.json", "Cart Service V1"));
+            app.UseSwaggerUI(c => {
+                c.SwaggerEndpoint("/swagger/V1/swagger.json", "Cart Service V1");
+                c.RoutePrefix = string.Empty;
+            });
         }
     }
 }

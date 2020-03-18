@@ -1,5 +1,4 @@
-﻿using ProductCatalogService.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -11,7 +10,7 @@ namespace RecommendationService.Models
     {
         private HttpClient products;
         private Task<HttpResponseMessage> responseMessage;
-        private const string PRODUCTS_BASE_URL = "https://localhost:44357/api/";
+        private const string PRODUCTS_BASE_URL = "https://academiaproductcatalogservice.azurewebsites.net/api/";
         private const string PRODUCTS_PAGE = "ProductCatalogService?pageNumber=";
         private const string PRODUCTS_NAME = "ProductCatalogService?name=";
         private const string PRODUCTS_PRODUCT_ID = "ProductCatalogService/";

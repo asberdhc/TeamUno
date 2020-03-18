@@ -5,7 +5,6 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using ProductCatalogService.Models;
 using RecommendationService.Models;
 
 namespace RecomendationService.Controllers
@@ -44,8 +43,14 @@ namespace RecomendationService.Controllers
                 List<ProductDTO> recomendedProducts = new List<ProductDTO>();
                 while (totalPages > 0)
                 {
-                    var actualPage = productsAPI.GetPage(totalPages--, "").Products;
-                    List<ProductDTO> productsSameCategory = actualPage.Where(p => p.Categories.Contains(actualCategories[0])).ToList();
+                    List<ProductDTO> actualPage = productsAPI.GetPage(totalPages--, "").Products;
+                    List<ProductDTO> productsSameCategory = actualPage
+                        .Select(p => new { likeness = Utilities.CompareStringLists(actualCategories, p.Categories), p })
+                        .Where(an => an.p.Id != id && an.likeness > 0)
+                        .OrderByDescending(an => an.likeness)
+                        .Take(10)
+                        .Select(an => an.p)
+                        .ToList();
                     recomendedProducts.AddRange(productsSameCategory);
                 }
 

@@ -56,7 +56,11 @@ namespace RecommendationService
             app.UseMvc();
 
             app.UseSwagger();
-            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/V1/swagger.json", "Recomendation Service V1"));
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/V1/swagger.json", "Recomendation Service V1");
+                c.RoutePrefix = string.Empty;
+            });
         }
     }
 }
