@@ -55,7 +55,7 @@ namespace CartServiceTest
             //requestStatusCode = response.;
             var count = (int)response.Value.GetType().GetProperty("Count").GetValue(response.Value);
             //assert
-            Assert.AreEqual(expectedCountItems, 3);
+            Assert.AreEqual(expectedCountItems, count);
         }
 
     
