@@ -55,3 +55,5 @@ C:\Users\Curso\Desktop\API\TeamUno\ProductCatalogService\obj\Debug\netcoreapp2.1
 C:\Users\Curso\Desktop\API\TeamUno\ProductCatalogService\obj\Debug\netcoreapp2.1\ProductCatalogService.dll
 C:\Users\Curso\Desktop\API\TeamUno\ProductCatalogService\obj\Debug\netcoreapp2.1\ProductCatalogService.pdb
 C:\Users\Curso\Documents\Academia\TeamUno\ProductCatalogService\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Users\Curso\source\repos\TeamUno\ProductCatalogService\obj\Debug\netcoreapp2.1\ProductCatalogService.csprojAssemblyReference.cache
+C:\Users\Curso\source\repos\TeamUno\ProductCatalogService\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs

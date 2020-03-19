@@ -15,9 +15,12 @@ namespace RecomendationService.Controllers
     {
         ProductCatalogServiceAPI productsAPI;
 
-        public RecomendationServiceController()
+        public RecomendationServiceController(bool mock = false)
         {
-            productsAPI = new ProductCatalogServiceAPI();
+            if (mock)
+                productsAPI = new ProductCatalogServiceAPIMock();
+            else
+                productsAPI = new ProductCatalogServiceAPI();
         }
 
         [HttpGet]

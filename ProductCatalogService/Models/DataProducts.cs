@@ -49,7 +49,7 @@ namespace ProductCatalogService.Models
                     PriceDistributor = USD,
                     PriceClient = productDTO.PriceUsd.Units,
                     PriceMember = productDTO.PriceUsd.Nanos,
-                    Keywords = string.Join("-", productDTO.Categories),
+                    Keywords = string.Join("-", productDTO.Categories).ToUpper(),
                     DateUpdate = DateTime.Now,
                     IdCatalog = 3,
                     IsEnabled = true
@@ -57,6 +57,7 @@ namespace ProductCatalogService.Models
                 db.SaveChanges();
 
                 productDTO.Id = productInserted.Title;
+                productDTO.Picture = productInserted.Observations;
                 return productDTO;
             }
             catch (Exception e)
@@ -183,7 +184,7 @@ namespace ProductCatalogService.Models
                     productOnDb.PriceDistributor = USD;
                     productOnDb.PriceClient = product.PriceUsd.Units;
                     productOnDb.PriceMember = product.PriceUsd.Nanos;
-                    productOnDb.Keywords = string.Join('-', product.Categories);
+                    productOnDb.Keywords = string.Join('-', product.Categories).ToUpper();
 
                     db.SaveChanges();
                     return true;

@@ -10,7 +10,7 @@ namespace RecommendationService.Models
     {
         private HttpClient products;
         private Task<HttpResponseMessage> responseMessage;
-        private const string PRODUCTS_BASE_URL = "https://academiaproductcatalogservice.azurewebsites.net/api/";
+        private string productsBaseUrl;
         private const string PRODUCTS_PAGE = "ProductCatalogService?pageNumber=";
         private const string PRODUCTS_NAME = "ProductCatalogService?name=";
         private const string PRODUCTS_PRODUCT_ID = "ProductCatalogService/";
@@ -18,11 +18,12 @@ namespace RecommendationService.Models
         public ProductCatalogServiceAPI()
         {
             products = new HttpClient();
-            products.BaseAddress = new Uri(PRODUCTS_BASE_URL);
+            productsBaseUrl = Environment.GetEnvironmentVariable("ProductCatalogServiceURL");
+            products.BaseAddress = new Uri(productsBaseUrl);
             responseMessage = null;
         }
 
-        public ProductDTO GetById(string id)
+        public virtual ProductDTO GetById(string id)
         {
             responseMessage = products.GetAsync(PRODUCTS_PRODUCT_ID + id);
             responseMessage.Wait();
@@ -32,7 +33,7 @@ namespace RecommendationService.Models
             return new ProductDTO();
         }
 
-        public PageDTO GetPage(int? pageNumber, string name)
+        public virtual PageDTO GetPage(int? pageNumber, string name)
         {
             if (pageNumber.HasValue)
             {
