@@ -42,7 +42,7 @@ namespace ProductCatalogService.Models.EF
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("data source=microservicessttk2.database.windows.net; initial catalog=DataProducts; user id=adminSttk; password=@Softtek01");
+                optionsBuilder.UseSqlServer("data source=stk-academia-demo.database.windows.net; initial catalog=DataProducts; user id=he-man; password=yGvGnqfqwN3bsyq");
             }
         }
 

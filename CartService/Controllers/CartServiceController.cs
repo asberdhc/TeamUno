@@ -14,11 +14,21 @@ namespace CartService.Controllers
     [ApiController]
     public class CartServiceController : ControllerBase, ICartService
     {
-        private DataProductsContext db;
-        public CartServiceController(DataProductsContext db)
-        {
-            this.db = db;
-        }
+        private DataProductsContext db = new DataProductsContext();
+        //public CartServiceController(DataProductsContext Db)
+        //{
+        //    if (Db == null)
+        //    {
+        //        db = new DataProductsContext();
+        //    }
+        //    this.db = Db;
+        //}
+        //public CartServiceController()
+        //{
+        //    if (db == null)
+        //        db = new DataProductsContext(); 
+
+        //}
 
 
         [HttpGet]

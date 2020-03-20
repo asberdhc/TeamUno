@@ -29,3 +29,6 @@ C:\Users\Curso\Documents\Academia\TeamUno\RecommendationServiceTest\obj\Debug\ne
 C:\Users\Curso\source\repos\TeamUno\RecommendationServiceTest\bin\Debug\netcoreapp2.1\RecommendationService.dll
 C:\Users\Curso\source\repos\TeamUno\RecommendationServiceTest\bin\Debug\netcoreapp2.1\RecommendationService.pdb
 C:\Users\Curso\source\repos\TeamUno\RecommendationServiceTest\obj\Debug\netcoreapp2.1\RecommendationServiceTest.csproj.CopyComplete
+C:\Users\Curso\Documents\Academia\TeamUno\RecommendationServiceTest\bin\Debug\netcoreapp2.1\RecommendationService.dll
+C:\Users\Curso\Documents\Academia\TeamUno\RecommendationServiceTest\bin\Debug\netcoreapp2.1\RecommendationService.pdb
+C:\Users\Curso\Documents\Academia\TeamUno\RecommendationServiceTest\obj\Debug\netcoreapp2.1\RecommendationServiceTest.csproj.CopyComplete

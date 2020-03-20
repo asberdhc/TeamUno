@@ -33,8 +33,6 @@ C:\Users\Curso\Documents\Academia\TeamUno\RecommendationService\bin\Debug\netcor
 C:\Users\Curso\Documents\Academia\TeamUno\RecommendationService\bin\Debug\netcoreapp2.1\RecommendationService.runtimeconfig.dev.json
 C:\Users\Curso\Documents\Academia\TeamUno\RecommendationService\bin\Debug\netcoreapp2.1\RecommendationService.dll
 C:\Users\Curso\Documents\Academia\TeamUno\RecommendationService\bin\Debug\netcoreapp2.1\RecommendationService.pdb
-C:\Users\Curso\Documents\Academia\TeamUno\RecommendationService\bin\Debug\netcoreapp2.1\ProductCatalogService.dll
-C:\Users\Curso\Documents\Academia\TeamUno\RecommendationService\bin\Debug\netcoreapp2.1\ProductCatalogService.pdb
 C:\Users\Curso\Documents\Academia\TeamUno\RecommendationService\obj\Debug\netcoreapp2.1\RecommendationService.csprojAssemblyReference.cache
 C:\Users\Curso\Documents\Academia\TeamUno\RecommendationService\obj\Debug\netcoreapp2.1\RecommendationService.csproj.CoreCompileInputs.cache
 C:\Users\Curso\Documents\Academia\TeamUno\RecommendationService\obj\Debug\netcoreapp2.1\RecommendationService.RazorAssemblyInfo.cache
@@ -43,7 +41,6 @@ C:\Users\Curso\Documents\Academia\TeamUno\RecommendationService\obj\Debug\netcor
 C:\Users\Curso\Documents\Academia\TeamUno\RecommendationService\obj\Debug\netcoreapp2.1\RecommendationService.AssemblyInfoInputs.cache
 C:\Users\Curso\Documents\Academia\TeamUno\RecommendationService\obj\Debug\netcoreapp2.1\RecommendationService.AssemblyInfo.cs
 C:\Users\Curso\Documents\Academia\TeamUno\RecommendationService\obj\Debug\netcoreapp2.1\RecommendationService.RazorTargetAssemblyInfo.cache
-C:\Users\Curso\Documents\Academia\TeamUno\RecommendationService\obj\Debug\netcoreapp2.1\RecommendationService.csproj.CopyComplete
 C:\Users\Curso\Documents\Academia\TeamUno\RecommendationService\obj\Debug\netcoreapp2.1\RecommendationService.dll
 C:\Users\Curso\Documents\Academia\TeamUno\RecommendationService\obj\Debug\netcoreapp2.1\RecommendationService.pdb
 C:\Users\Curso\source\repos\TeamUno\RecommendationService\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
