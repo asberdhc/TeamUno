@@ -2,9 +2,11 @@ Hello
 
 Please set the following envinonment variables to for ProductsCatalogService and CartService APIs.
 
-ProductCatalogService
+RecomendationService
 
 -ProductCatalogServiceURL : https://academiaproductcatalogservice.azurewebsites.net/api/
+
+ProductCatalogService
 
 -db_products_server : stk-academia-demo.database.windows.net
 
