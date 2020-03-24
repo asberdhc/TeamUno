@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CartService.Models
+namespace CartService.Models.EF
 {
-    public class Cart
+    public class CartIn
     {
         public string idClient { get; set; }
-        public List<Items> Items { get; set; }
-
+        public string idProduct { get; set; }
+        public int  quantity { get; set; }
     }
 }

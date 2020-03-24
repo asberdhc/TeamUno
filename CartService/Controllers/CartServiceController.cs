@@ -42,9 +42,9 @@ namespace CartService.Controllers
         [HttpPost]
         [Route("")]
         
-        public ActionResult AddToCart([FromBody] Cart cartFromBody)
+        public ActionResult AddToCart([FromBody] CartIn cartFromBody)
         {
-            Cart cart = new Cart {
+            CartIn cart = new CartIn {
                 idClient = cartFromBody.idClient,
                 idProduct = cartFromBody.idProduct,
                 quantity = cartFromBody.quantity
@@ -62,10 +62,10 @@ namespace CartService.Controllers
         [Route("{userId}")]
         public ActionResult GetById(string userId)
         {
-            List<Cart> cartList = new List<Cart>();
+            Cart cartList = new Cart();
             Data data = new Data(db);
-            cartList.AddRange(data.GetCartById(userId));
-            if (cartList.Count == 0 || cartList == null)
+            cartList = data.GetCartById(userId);
+            if (cartList.Items.Count == 0 || cartList == null)
                 return Ok("Empty cart");
             return Ok(cartList);
           //  throw new NotImplementedException();

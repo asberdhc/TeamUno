@@ -15,7 +15,7 @@ namespace CartService.Models
         }
 
 
-        public bool AddtoCart(Cart cart)
+        public bool AddtoCart(CartIn cart)
         {
             try
             {
@@ -37,19 +37,19 @@ namespace CartService.Models
         }
 
 
-        public List<Cart> GetCartById(string id)
+        public Cart GetCartById(string id)
         {
-            List<Cart> cartList = new List<Cart>();
-            var cart = db.CatTypeDetails
+            Cart cartList = new Cart();
+            cartList.idClient = id;
+            List<Items> cart = db.CatTypeDetails
                 .Where(p => p.Name == id)
-                .Select(p => new Cart
+                .Select(p => new Items
                 {
-                    idClient = p.Name,
                     idProduct = p.Code,
                     quantity = Int32.Parse(p.Description)
                 }
-                );
-            cartList.AddRange(cart);
+                ).ToList();
+            cartList.Items = cart;
             return cartList;
         }
 

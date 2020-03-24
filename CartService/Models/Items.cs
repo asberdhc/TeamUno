@@ -5,10 +5,9 @@ using System.Threading.Tasks;
 
 namespace CartService.Models
 {
-    public class Cart
+    public class Items
     {
-        public string idClient { get; set; }
-        public List<Items> Items { get; set; }
-
+        public string idProduct { get; set; }
+        public int quantity { get; set; }
     }
 }

@@ -14,7 +14,8 @@ namespace CartServiceTest
     public class CartServiceControllerTest
     {
        
-        CartServiceController cartServiceControllerMock = new CartServiceController(new CartContextMock());
+        //CartServiceController cartServiceControllerMock = new CartServiceController(new CartContextMock());
+        CartServiceController cartServiceControllerMock = new CartServiceController();
 
        
         [TestMethod]
