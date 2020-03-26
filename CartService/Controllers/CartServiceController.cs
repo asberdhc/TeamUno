@@ -14,7 +14,15 @@ namespace CartService.Controllers
     [ApiController]
     public class CartServiceController : ControllerBase, ICartService
     {
-        private DataProductsContext db = new DataProductsContext();
+        private DataProductsContext db;
+
+        public CartServiceController(bool mock = false)
+        {
+            if (mock)
+                db = new CartContextMock();
+            else
+                db = new DataProductsContext();
+        }
         //public CartServiceController(DataProductsContext Db)
         //{
         //    if (Db == null)

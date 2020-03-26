@@ -49,6 +49,13 @@ namespace CartService.Models
                     quantity = Int32.Parse(p.Description)
                 }
                 ).ToList();
+            var dup = cart.GroupBy(x => x.idProduct)
+                 .Select(x => new { Key = x.Key, quantity = x.Sum(y => y.quantity) }).ToList();
+            cart.Clear();
+            foreach (var item in dup)
+            {
+                cart.Add(new Items { idProduct = item.Key, quantity = item.quantity });
+            }
             cartList.Items = cart;
             return cartList;
         }

@@ -15,7 +15,7 @@ namespace CartServiceTest
     {
        
         //CartServiceController cartServiceControllerMock = new CartServiceController(new CartContextMock());
-        CartServiceController cartServiceControllerMock = new CartServiceController();
+        CartServiceController cartServiceControllerMock = new CartServiceController(true);
 
        
         [TestMethod]
@@ -23,7 +23,7 @@ namespace CartServiceTest
         {
             //arrange
             int expected = 200;
-            Cart cart = new Cart{
+            CartIn cart = new CartIn{
                 idClient ="14",
                 idProduct = "563",
                 quantity = 2
