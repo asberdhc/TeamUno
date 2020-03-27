@@ -23,22 +23,7 @@ namespace CartService.Controllers
             else
                 db = new DataProductsContext();
         }
-        //public CartServiceController(DataProductsContext Db)
-        //{
-        //    if (Db == null)
-        //    {
-        //        db = new DataProductsContext();
-        //    }
-        //    this.db = Db;
-        //}
-        //public CartServiceController()
-        //{
-        //    if (db == null)
-        //        db = new DataProductsContext(); 
-
-        //}
-
-
+   
         [HttpGet]
         [Route("")]
         public ActionResult Quick200Response()
@@ -76,7 +61,6 @@ namespace CartService.Controllers
             if (cartList.Items.Count == 0 || cartList == null)
                 return Ok("Empty cart");
             return Ok(cartList);
-          //  throw new NotImplementedException();
         }
         [HttpDelete]
         [Route("{userId}")]

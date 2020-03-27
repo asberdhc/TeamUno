@@ -27,30 +27,12 @@ namespace CartService.Models.EF
             items.Add(new Items { idProduct = "vsdv", quantity = 2 });
             items.Add(new Items { idProduct = "werw", quantity = 2 });
             items.Add(new Items { idProduct = "werewr", quantity = 1 });
-
             mockCart.Add(new Cart { idClient = "1",Items = items});
             mockCart.Add(new Cart { idClient = "2",Items = items});
             mockCart.Add(new Cart { idClient = "3",Items = items});
             mockCart.Add(new Cart { idClient = "4",Items = items});
             mockCart.Add(new Cart { idClient = "5",Items = items});
             mockCart.Add(new Cart { idClient = "6",Items = items});
-
-            //    mockCart.Add(new Cart { idClient = "1", idProduct = "123", quantity = 3 });
-            //    mockCart.Add(new Cart { idClient = "1", idProduct = "12", quantity = 3 });
-            //    mockCart.Add(new Cart { idClient = "1", idProduct = "432", quantity = 3 });
-            //    mockCart.Add(new Cart { idClient = "2", idProduct = "23", quantity = 3 });
-            //    mockCart.Add(new Cart { idClient = "2", idProduct = "65", quantity = 3 });
-            //    mockCart.Add(new Cart { idClient = "2", idProduct = "567", quantity = 3 });
-            //    mockCart.Add(new Cart { idClient = "3", idProduct = "789", quantity = 3 });
-            //    mockCart.Add(new Cart { idClient = "3", idProduct = "342", quantity = 3 });
-            //    mockCart.Add(new Cart { idClient = "3", idProduct = "234", quantity = 3 });
-            //    mockCart.Add(new Cart { idClient = "3", idProduct = "646", quantity = 3 });
-            //    mockCart.Add(new Cart { idClient = "3", idProduct = "754", quantity = 3 });
-            //    mockCart.Add(new Cart { idClient = "4", idProduct = "234", quantity = 3 });
-            //    mockCart.Add(new Cart { idClient = "4", idProduct = "345", quantity = 3 });
-            //    mockCart.Add(new Cart { idClient = "4", idProduct = "65", quantity = 3 });
-            //    mockCart.Add(new Cart { idClient = "4", idProduct = "3456", quantity = 3 });
-
                 foreach (var item in mockCart)
                 {
                 foreach (var itemItem in items)
