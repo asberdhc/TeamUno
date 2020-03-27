@@ -37,8 +37,17 @@ namespace ProductCatalogService.Models.EF
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("data source=stk-academia-demo.database.windows.net; initial catalog=DataProducts; user id=he-man; password=yGvGnqfqwN3bsyq");
+                string db_products_server = Environment.GetEnvironmentVariable("db_products_server");
+                string db_products_user = Environment.GetEnvironmentVariable("db_products_user");
+                string db_products_password = Environment.GetEnvironmentVariable("db_products_password");
+                string db_products_name_db = Environment.GetEnvironmentVariable("db_products_name_db");
+
+                optionsBuilder.UseSqlServer(
+                    "data source=" + db_products_server + "; " +
+                    "initial catalog=" + db_products_name_db + "; " +
+                    "user id=" + db_products_user + "; " +
+                    "password=" + db_products_password
+                );
             }
         }
 
