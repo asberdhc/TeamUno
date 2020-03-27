@@ -45,19 +45,18 @@ namespace ProductCatalogService.Models
                     Title = newId,
                     Nombre = productDTO.Name,
                     Description = productDTO.Description,
-                    Observations = Utilities.GetImageByNameOrDefault(productDTO.Name),
-                    PriceDistributor = USD,
+                    Picture = Utilities.GetImageByNameOrDefault(productDTO.Name),
+                    CurrencyCode = USD,
                     PriceClient = productDTO.PriceUsd.Units,
-                    PriceMember = productDTO.PriceUsd.Nanos,
+                    MemberDiscount = 1,
                     Keywords = string.Join("-", productDTO.Categories).ToUpper(),
                     DateUpdate = DateTime.Now,
-                    IdCatalog = 3,
                     IsEnabled = true
                 }).Entity;
                 db.SaveChanges();
 
                 productDTO.Id = productInserted.Title;
-                productDTO.Picture = productInserted.Observations;
+                productDTO.Picture = productInserted.Picture;
                 return productDTO;
             }
             catch (Exception e)
@@ -77,12 +76,12 @@ namespace ProductCatalogService.Models
                         Id = productInDB.Title,
                         Name = productInDB.Nombre,
                         Description = productInDB.Description,
-                        Picture = productInDB.Observations,
+                        Picture = productInDB.Picture,
                         PriceUsd = new PriceDTO
                         {
-                            CurrencyCode = "USD",
-                            Units = int.Parse(productInDB.PriceClient.ToString()),
-                            Nanos = int.Parse(productInDB.PriceMember.ToString())
+                            CurrencyCode = productInDB.CurrencyCode,
+                            Units = int.Parse(productInDB.PriceClient.ToString().Split('.')[0]),
+                            Nanos = int.Parse(productInDB.PriceClient.ToString().Split('.')[1])
                         },
                         Categories = productInDB.Keywords.Split("-").ToList()
                     };
@@ -100,16 +99,17 @@ namespace ProductCatalogService.Models
             {
                 var ProductsInDb = db.Products
                     .Where(p => p.Nombre.Contains(name) && p.IsEnabled == true)
-                    .Select(p => new ProductDTO {
+                    .Select(p => new ProductDTO
+                    {
                         Id = p.Title,
                         Name = p.Nombre,
                         Description = p.Description,
-                        Picture = p.Observations,
+                        Picture = p.Picture,
                         PriceUsd = new PriceDTO
                         {
-                            CurrencyCode = "USD",
-                            Units = int.Parse(p.PriceClient.ToString()),
-                            Nanos = int.Parse(p.PriceMember.ToString())
+                            CurrencyCode = p.CurrencyCode,
+                            Units = int.Parse(p.PriceClient.ToString().Split('.', StringSplitOptions.None)[0]),
+                            Nanos = int.Parse(p.PriceClient.ToString().Split('.', StringSplitOptions.None)[1])
                         },
                         Categories = p.Keywords.Split('-', StringSplitOptions.None).ToList()
                     }).ToList();
@@ -149,12 +149,12 @@ namespace ProductCatalogService.Models
                         Id = p.Title,
                         Name = p.Nombre,
                         Description = p.Description,
-                        Picture = p.Observations,
+                        Picture = p.Picture,
                         PriceUsd = new PriceDTO
                         {
-                            CurrencyCode = "USD",
-                            Units = int.Parse(p.PriceClient.ToString()),
-                            Nanos = int.Parse(p.PriceMember.ToString())
+                            CurrencyCode = p.CurrencyCode,
+                            Units = int.Parse(p.PriceClient.ToString().Split('.', StringSplitOptions.None)[0]),
+                            Nanos = int.Parse(p.PriceClient.ToString().Split('.', StringSplitOptions.None)[1])
                         },
                         Categories = p.Keywords.Split('-', StringSplitOptions.None).ToList()
                     })
@@ -180,10 +180,10 @@ namespace ProductCatalogService.Models
                 {
                     productOnDb.Nombre = product.Name;
                     productOnDb.Description = product.Description;
-                    productOnDb.Observations = product.Picture;
-                    productOnDb.PriceDistributor = USD;
-                    productOnDb.PriceClient = product.PriceUsd.Units;
-                    productOnDb.PriceMember = product.PriceUsd.Nanos;
+                    productOnDb.Picture = product.Picture;
+                    productOnDb.CurrencyCode = USD;
+                    productOnDb.PriceClient = decimal.Parse(product.PriceUsd.Units + "." + product.PriceUsd.Nanos);
+                    productOnDb.MemberDiscount = 1;
                     productOnDb.Keywords = string.Join('-', product.Categories).ToUpper();
 
                     db.SaveChanges();

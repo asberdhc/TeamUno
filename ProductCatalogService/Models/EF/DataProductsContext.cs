@@ -16,10 +16,6 @@ namespace ProductCatalogService.Models.EF
         }
 
         public virtual DbSet<Advertising> Advertising { get; set; }
-        public virtual DbSet<CatBrands> CatBrands { get; set; }
-        public virtual DbSet<CatCatalogs> CatCatalogs { get; set; }
-        public virtual DbSet<CatColors> CatColors { get; set; }
-        public virtual DbSet<CatProviders> CatProviders { get; set; }
         public virtual DbSet<CatRatings> CatRatings { get; set; }
         public virtual DbSet<CatSizes> CatSizes { get; set; }
         public virtual DbSet<CatTypeDetails> CatTypeDetails { get; set; }
@@ -41,16 +37,16 @@ namespace ProductCatalogService.Models.EF
         {
             if (!optionsBuilder.IsConfigured)
             {
-                string server   = Environment.GetEnvironmentVariable("db_products_server"   );
-                string user     = Environment.GetEnvironmentVariable("db_products_user"     );
-                string password = Environment.GetEnvironmentVariable("db_products_password" );
-                string nameDb   = Environment.GetEnvironmentVariable("db_products_name_db"  );
+                string db_products_server = Environment.GetEnvironmentVariable("db_products_server");
+                string db_products_user = Environment.GetEnvironmentVariable("db_products_user");
+                string db_products_password = Environment.GetEnvironmentVariable("db_products_password");
+                string db_products_name_db = Environment.GetEnvironmentVariable("db_products_name_db");
 
                 optionsBuilder.UseSqlServer(
-                    "data source=" + server + ";" +
-                    "initial catalog=" + nameDb + ";" +
-                    "user id=" + user + ";" +
-                    "password=" + password
+                    "data source=" + db_products_server + "; " +
+                    "initial catalog=" + db_products_name_db + "; " +
+                    "user id=" + db_products_user + "; " +
+                    "password=" + db_products_password
                 );
             }
         }
@@ -63,69 +59,6 @@ namespace ProductCatalogService.Models.EF
                     .IsRequired()
                     .HasMaxLength(300)
                     .IsUnicode(false);
-            });
-
-            modelBuilder.Entity<CatBrands>(entity =>
-            {
-                entity.HasKey(e => e.IdBrand);
-
-                entity.Property(e => e.Code).IsRequired();
-
-                entity.Property(e => e.DateUpdate).HasColumnType("datetime");
-
-                entity.Property(e => e.Description).IsRequired();
-
-                entity.Property(e => e.Name).IsRequired();
-            });
-
-            modelBuilder.Entity<CatCatalogs>(entity =>
-            {
-                entity.HasKey(e => e.IdCatalog);
-
-                entity.HasIndex(e => e.IdProvider)
-                    .HasName("IX_FK_CatCatalogsCatProviders");
-
-                entity.Property(e => e.DateUpdate).IsRequired();
-
-                entity.Property(e => e.EndActiveDate).IsRequired();
-
-                entity.Property(e => e.IsEnabled).IsRequired();
-
-                entity.Property(e => e.Season).IsRequired();
-
-                entity.Property(e => e.StarActiveDate).IsRequired();
-
-                entity.HasOne(d => d.IdProviderNavigation)
-                    .WithMany(p => p.CatCatalogs)
-                    .HasForeignKey(d => d.IdProvider)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_CatCatalogsCatProviders");
-            });
-
-            modelBuilder.Entity<CatColors>(entity =>
-            {
-                entity.HasKey(e => e.IdColor);
-
-                entity.Property(e => e.Description).IsRequired();
-
-                entity.Property(e => e.HexaDecimal).IsRequired();
-
-                entity.Property(e => e.Name).IsRequired();
-            });
-
-            modelBuilder.Entity<CatProviders>(entity =>
-            {
-                entity.HasKey(e => e.IdProvider);
-
-                entity.Property(e => e.DateUpdate).HasColumnType("datetime");
-
-                entity.Property(e => e.Description).IsRequired();
-
-                entity.Property(e => e.IsEnabled).IsRequired();
-
-                entity.Property(e => e.Name).IsRequired();
-
-                entity.Property(e => e.Url).IsRequired();
             });
 
             modelBuilder.Entity<CatRatings>(entity =>
@@ -151,12 +84,6 @@ namespace ProductCatalogService.Models.EF
                 entity.Property(e => e.Unity).IsRequired();
 
                 entity.Property(e => e.Value).IsRequired();
-
-                entity.HasOne(d => d.IdTypeNavigation)
-                    .WithMany(p => p.CatSizes)
-                    .HasForeignKey(d => d.IdType)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_CatTypeProductCatSizes");
             });
 
             modelBuilder.Entity<CatTypeDetails>(entity =>
@@ -171,12 +98,6 @@ namespace ProductCatalogService.Models.EF
                 entity.Property(e => e.Description).IsRequired();
 
                 entity.Property(e => e.Name).IsRequired();
-
-                entity.HasOne(d => d.IdTypeNavigation)
-                    .WithMany(p => p.CatTypeDetails)
-                    .HasForeignKey(d => d.IdType)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_CatTypeProductCatTypeDetails");
             });
 
             modelBuilder.Entity<CatTypeProduct>(entity =>
@@ -290,20 +211,10 @@ namespace ProductCatalogService.Models.EF
 
             modelBuilder.Entity<Products>(entity =>
             {
-                entity.HasIndex(e => e.IdBrand)
-                    .HasName("IX_FK_CatBrandsProducts");
-
-                entity.HasIndex(e => e.IdCatalog)
-                    .HasName("IX_FK_CatCatalogsProducts");
-
-                entity.HasIndex(e => e.IdColor)
-                    .HasName("IX_FK_CatColorsProducts");
-
-                entity.HasIndex(e => e.IdProvider)
-                    .HasName("IX_FK_ProductsCatProviders");
-
-                entity.HasIndex(e => e.IdType)
-                    .HasName("IX_FK_CatTypeProductProducts");
+                entity.Property(e => e.CurrencyCode)
+                    .IsRequired()
+                    .HasMaxLength(5)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.DateUpdate).HasColumnType("datetime");
 
@@ -311,43 +222,15 @@ namespace ProductCatalogService.Models.EF
 
                 entity.Property(e => e.Keywords).IsRequired();
 
+                entity.Property(e => e.MemberDiscount).HasColumnType("decimal(3, 2)");
+
                 entity.Property(e => e.Nombre).IsRequired();
 
-                entity.Property(e => e.Observations).IsRequired();
+                entity.Property(e => e.Picture).IsRequired();
 
-                entity.Property(e => e.PriceClient).HasColumnType("decimal(18, 0)");
-
-                entity.Property(e => e.PriceDistributor).HasColumnType("decimal(18, 0)");
-
-                entity.Property(e => e.PriceMember).HasColumnType("decimal(18, 0)");
+                entity.Property(e => e.PriceClient).HasColumnType("decimal(38, 2)");
 
                 entity.Property(e => e.Title).IsRequired();
-
-                entity.HasOne(d => d.IdBrandNavigation)
-                    .WithMany(p => p.Products)
-                    .HasForeignKey(d => d.IdBrand)
-                    .HasConstraintName("FK_CatBrandsProducts");
-
-                entity.HasOne(d => d.IdCatalogNavigation)
-                    .WithMany(p => p.Products)
-                    .HasForeignKey(d => d.IdCatalog)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_CatCatalogsProducts");
-
-                entity.HasOne(d => d.IdColorNavigation)
-                    .WithMany(p => p.Products)
-                    .HasForeignKey(d => d.IdColor)
-                    .HasConstraintName("FK_CatColorsProducts");
-
-                entity.HasOne(d => d.IdProviderNavigation)
-                    .WithMany(p => p.Products)
-                    .HasForeignKey(d => d.IdProvider)
-                    .HasConstraintName("FK_ProductsCatProviders");
-
-                entity.HasOne(d => d.IdTypeNavigation)
-                    .WithMany(p => p.Products)
-                    .HasForeignKey(d => d.IdType)
-                    .HasConstraintName("FK_CatTypeProductProducts");
             });
 
             modelBuilder.Entity<Qualification>(entity =>

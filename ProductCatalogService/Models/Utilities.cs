@@ -11,7 +11,6 @@ namespace ProductCatalogService.Models
 {
     public class Utilities
     {
-        private static string URL;
         /// <summary>
         /// Returns a URL of an Image depending on the given string. If there is no results
         /// then the method returns a random Image
@@ -22,6 +21,7 @@ namespace ProductCatalogService.Models
         {
             try
             {
+                string URL;
                 string ApiUrl = "https://api.unsplash.com/search/photos?query=" + name + "&client_id=RR8zTp6LTR2TmVYodb76GyD0Z5SaXaGUoYxX3lr4TJg";
                 var request = (HttpWebRequest)WebRequest.Create(ApiUrl);
                 var content = string.Empty;
@@ -58,6 +58,15 @@ namespace ProductCatalogService.Models
             }
         }
 
+        /// <summary>
+        /// Returns a random string based on the parameters
+        /// </summary>
+        /// <param name="requiredLength">How long should be the final string</param>
+        /// <param name="requireNonAlphanumeric">use "true" to allow NonAlphanumeric</param>
+        /// <param name="requireDigit">use "true" to allow Digits</param>
+        /// <param name="requireLowercase">use "true" to allow Lowercase</param>
+        /// <param name="requireUppercase">use "true" to allow Upercase</param>
+        /// <returns></returns>
         public static string NewProductId(int requiredLength, bool requireNonAlphanumeric = true, bool requireDigit = true, bool requireLowercase = true, bool requireUppercase = true)
         {
             int length = requiredLength;

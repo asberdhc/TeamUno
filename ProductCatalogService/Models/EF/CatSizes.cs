@@ -17,7 +17,6 @@ namespace ProductCatalogService.Models.EF
         public string Description { get; set; }
         public string Value { get; set; }
 
-        public CatTypeProduct IdTypeNavigation { get; set; }
         public ICollection<SizeForProduct> SizeForProduct { get; set; }
     }
 }

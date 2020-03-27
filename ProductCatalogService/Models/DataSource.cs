@@ -8,7 +8,7 @@ namespace ProductCatalogService.Models
 {
     public class DataSource
     {
-        public const int USD = 1;
+        public const string USD = "USD";
         protected DataProductsContext db;
     }
 }

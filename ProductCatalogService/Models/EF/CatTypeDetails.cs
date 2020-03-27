@@ -16,7 +16,6 @@ namespace ProductCatalogService.Models.EF
         public string Name { get; set; }
         public string Description { get; set; }
 
-        public CatTypeProduct IdTypeNavigation { get; set; }
         public ICollection<DetailProduct> DetailProduct { get; set; }
     }
 }
