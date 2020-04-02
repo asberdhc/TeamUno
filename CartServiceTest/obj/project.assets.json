@@ -14388,11 +14388,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Curso\\Documents\\Academia\\TeamUno\\CartServiceTest\\CartServiceTest.csproj",
+      "projectUniqueName": "C:\\Users\\Curso\\source\\repos\\TeamUno\\CartServiceTest\\CartServiceTest.csproj",
       "projectName": "CartServiceTest",
-      "projectPath": "C:\\Users\\Curso\\Documents\\Academia\\TeamUno\\CartServiceTest\\CartServiceTest.csproj",
+      "projectPath": "C:\\Users\\Curso\\source\\repos\\TeamUno\\CartServiceTest\\CartServiceTest.csproj",
       "packagesPath": "C:\\Users\\Curso\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Curso\\Documents\\Academia\\TeamUno\\CartServiceTest\\obj\\",
+      "outputPath": "C:\\Users\\Curso\\source\\repos\\TeamUno\\CartServiceTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -14411,8 +14411,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\Curso\\Documents\\Academia\\TeamUno\\CartService\\CartService.csproj": {
-              "projectPath": "C:\\Users\\Curso\\Documents\\Academia\\TeamUno\\CartService\\CartService.csproj"
+            "C:\\Users\\Curso\\source\\repos\\TeamUno\\CartService\\CartService.csproj": {
+              "projectPath": "C:\\Users\\Curso\\source\\repos\\TeamUno\\CartService\\CartService.csproj"
             }
           }
         }

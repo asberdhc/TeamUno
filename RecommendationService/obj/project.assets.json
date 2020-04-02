@@ -12982,11 +12982,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Curso\\Documents\\Academia\\TeamUno\\RecommendationService\\RecommendationService.csproj",
+      "projectUniqueName": "C:\\Users\\Curso\\source\\repos\\TeamUno\\RecommendationService\\RecommendationService.csproj",
       "projectName": "RecommendationService",
-      "projectPath": "C:\\Users\\Curso\\Documents\\Academia\\TeamUno\\RecommendationService\\RecommendationService.csproj",
+      "projectPath": "C:\\Users\\Curso\\source\\repos\\TeamUno\\RecommendationService\\RecommendationService.csproj",
       "packagesPath": "C:\\Users\\Curso\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Curso\\Documents\\Academia\\TeamUno\\RecommendationService\\obj\\",
+      "outputPath": "C:\\Users\\Curso\\source\\repos\\TeamUno\\RecommendationService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
