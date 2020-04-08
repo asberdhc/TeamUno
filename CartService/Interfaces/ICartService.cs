@@ -1,5 +1,4 @@
 ﻿using CartService.Models;
-using CartService.Models.EF;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;

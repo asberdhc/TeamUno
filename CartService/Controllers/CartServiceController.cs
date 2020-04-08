@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using CartService.Interfaces;
 using CartService.Models;
-using CartService.Models.EF;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -14,14 +13,14 @@ namespace CartService.Controllers
     [ApiController]
     public class CartServiceController : ControllerBase, ICartService
     {
-        private DataProductsContext db;
+        private RedisSource cache;
 
         public CartServiceController(bool mock = false)
         {
             if (mock)
-                db = new CartContextMock();
+                cache = new CartOnRedisMock();
             else
-                db = new DataProductsContext();
+                cache = new CartOnRedis("localhost");
         }
    
         [HttpGet]
@@ -31,20 +30,11 @@ namespace CartService.Controllers
             return Ok("Server Working");
         }
 
-
         [HttpPost]
         [Route("")]
-        
         public ActionResult AddToCart([FromBody] CartIn cartFromBody)
         {
-            CartIn cart = new CartIn {
-                idClient = cartFromBody.idClient,
-                idProduct = cartFromBody.idProduct,
-                quantity = cartFromBody.quantity
-                
-            };
-            Data data = new Data(db);
-            if (data.AddtoCart(cart))
+            if (cache.AddToCart(cartFromBody.idClient, cartFromBody.idProduct, cartFromBody.quantity))
                 return Ok("The product has been added to cart");
             else
                 return Ok("product not added to cart");
@@ -55,20 +45,14 @@ namespace CartService.Controllers
         [Route("{userId}")]
         public ActionResult GetById(string userId)
         {
-            Cart cartList = new Cart();
-            Data data = new Data(db);
-            cartList = data.GetCartById(userId);
-            if (cartList.Items.Count == 0 || cartList == null)
-                return Ok("Empty cart");
-            return Ok(cartList);
+            return Ok(cache.GetById(userId));
         }
+
         [HttpDelete]
         [Route("{userId}")]
         public ActionResult EmptyCart(string userId)
         {
-            Data data = new Data(db);
-
-            if (data.EmptyCart(userId))
+            if (cache.EmptyCart(userId))
                 return Ok("Cart empty");
             else
                 return Ok("Can´t empty cart");

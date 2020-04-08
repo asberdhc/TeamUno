@@ -8,7 +8,7 @@ namespace CartService.Models
     public class Cart
     {
         public string idClient { get; set; }
-        public List<Items> Items { get; set; }
+        public List<Item> Items { get; set; }
 
     }
 }

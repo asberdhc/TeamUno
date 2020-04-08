@@ -1,6 +1,5 @@
 using CartService.Controllers;
 using CartService.Models;
-using CartService.Models.EF;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
