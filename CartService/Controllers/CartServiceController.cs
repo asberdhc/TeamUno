@@ -20,7 +20,7 @@ namespace CartService.Controllers
             if (mock)
                 cache = new CartOnRedisMock();
             else
-                cache = new CartOnRedis("localhost");
+                cache = new CartOnRedis(Environment.GetEnvironmentVariable("cache_redis_server"));
         }
    
         [HttpGet]
